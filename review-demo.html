@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewFlow CIS — Демо review-страницы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="demo-shell">
+      <header class="demo-header">
+        <a class="brand" href="index.html">
+          <span class="brand__mark">RF</span>
+          <span>ReviewFlow CIS</span>
+        </a>
+        <div class="header-actions">
+          <a class="button button--ghost" href="index.html">Лендинг</a>
+          <a class="button button--secondary" href="dashboard.html">Демо-кабинет</a>
+        </div>
+      </header>
+
+      <main class="demo-main">
+        <section class="demo-config card-soft">
+          <div class="section-heading section-heading--compact">
+            <span class="eyebrow">Настройки сценария</span>
+            <h1>Демо конструктора review-страницы</h1>
+            <p>
+              Этот экран имитирует будущую связку “конструктор + публичная страница”. Здесь можно
+              проверить UX-поток без backend и интеграций.
+            </p>
+          </div>
+
+          <div class="config-grid">
+            <label class="field">
+              <span>Название компании</span>
+              <input id="companyName" type="text" value="Beauty Clinic Nova" />
+            </label>
+            <label class="field field--full">
+              <span>Приветственный текст</span>
+              <textarea id="welcomeText" rows="3">Спасибо, что выбрали нас. Нам важно ваше мнение — оцените ваш опыт и помогите нам стать лучше.</textarea>
+            </label>
+            <label class="field">
+              <span>Порог позитива</span>
+              <input id="positiveThreshold" type="range" min="3" max="5" step="1" value="4" />
+              <small>Позитив начинается с <strong id="thresholdValue">4</strong>★</small>
+            </label>
+            <label class="field field--full">
+              <span>Сообщение для негатива</span>
+              <textarea id="negativeText" rows="3">Нам жаль, что ваш опыт оказался неидеальным. Опишите, пожалуйста, проблему и оставьте номер телефона — отдел качества свяжется с вами.</textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="demo-preview card-glass">
+          <div class="preview-topbar">
+            <div>
+              <p class="muted">Публичная страница клиента</p>
+              <h2 id="previewCompany">Beauty Clinic Nova</h2>
+            </div>
+            <div class="qr-card">
+              <div class="qr-placeholder" aria-hidden="true"></div>
+              <span>QR для стойки / визитки</span>
+            </div>
+          </div>
+
+          <p class="preview-copy" id="previewWelcome">
+            Спасибо, что выбрали нас. Нам важно ваше мнение — оцените ваш опыт и помогите нам
+            стать лучше.
+          </p>
+
+          <section class="rating-card card-soft">
+            <h3>Как вы оцениваете визит?</h3>
+            <div class="stars" id="starPicker" aria-label="Выберите оценку"></div>
+
+            <div class="location-picker">
+              <label for="locationSelect">Какую локацию вы посещали?</label>
+              <select id="locationSelect">
+                <option>Алматы · Абая 21</option>
+                <option>Астана · Туран 14</option>
+                <option>Шымкент · Tauke Khan 98</option>
+              </select>
+            </div>
+
+            <div class="flow-result flow-result--hidden" id="positiveBranch">
+              <span class="badge badge--success">Позитивная ветка</span>
+              <h4>Спасибо за высокую оценку 💜</h4>
+              <p>
+                Будем благодарны, если вы поделитесь отзывом публично. Выберите удобную площадку,
+                и мы сразу переведём вас на страницу отзыва.
+              </p>
+              <div class="platform-tabs">
+                <button class="platform-tab" data-platform="Google">Google</button>
+                <button class="platform-tab" data-platform="Яндекс">Яндекс</button>
+                <button class="platform-tab" data-platform="2GIS">2GIS</button>
+              </div>
+              <p class="platform-feedback" id="platformFeedback">
+                Нажмите на площадку, чтобы сымитировать переход на страницу отзыва.
+              </p>
+            </div>
+
+            <div class="flow-result flow-result--hidden" id="negativeBranch">
+              <span class="badge badge--warning">Негативная ветка</span>
+              <h4>Мы хотим разобраться в ситуации</h4>
+              <p id="previewNegative">
+                Нам жаль, что ваш опыт оказался неидеальным. Опишите, пожалуйста, проблему и
+                оставьте номер телефона — отдел качества свяжется с вами.
+              </p>
+              <div class="feedback-grid">
+                <label class="field field--full">
+                  <span>Что произошло?</span>
+                  <textarea id="issueText" rows="4" placeholder="Опишите проблему"></textarea>
+                </label>
+                <label class="field">
+                  <span>Контактный номер</span>
+                  <input id="phoneInput" type="tel" placeholder="+7 (___) ___-__-__" />
+                </label>
+                <div class="feedback-actions">
+                  <button class="button button--primary" id="sendIssueButton">
+                    Отправить в отдел качества
+                  </button>
+                  <p class="muted" id="issueFeedback">
+                    В demo-версии мы покажем, как это будет выглядеть в Telegram-уведомлении.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="analytics-strip">
+          <article class="mini-stat card-soft">
+            <span>Открытия ссылки</span>
+            <strong id="opensCount">0</strong>
+          </article>
+          <article class="mini-stat card-soft">
+            <span>Оставили звезды</span>
+            <strong id="ratingsCount">0</strong>
+          </article>
+          <article class="mini-stat card-soft">
+            <span>Перешли на площадку</span>
+            <strong id="platformClicksCount">0</strong>
+          </article>
+          <article class="mini-stat card-soft">
+            <span>Негативные обращения</span>
+            <strong id="negativeCount">0</strong>
+          </article>
+        </section>
+
+        <section class="telegram-preview card-soft" id="telegramPreview">
+          <div class="section-heading section-heading--compact">
+            <span class="eyebrow">Telegram preview</span>
+            <h2>Как будет выглядеть сигнал владельцу бизнеса</h2>
+          </div>
+          <pre id="telegramMessage">Пока нет новых негативных обращений.</pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
