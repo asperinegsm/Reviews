@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewFlow CIS — Демо кабинета</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar card-soft">
+        <a class="brand brand--sidebar" href="index.html">
+          <span class="brand__mark">RF</span>
+          <span>ReviewFlow CIS</span>
+        </a>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-link sidebar-link--active" href="dashboard.html">Главная</a>
+          <a class="sidebar-link" href="review-demo.html">Review flow</a>
+          <a class="sidebar-link" href="#">Отзывы</a>
+          <a class="sidebar-link" href="#">Страницы и QR</a>
+          <a class="sidebar-link" href="#">AI-ответы</a>
+          <a class="sidebar-link" href="#">Настройки</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p class="muted">Следующий шаг</p>
+          <strong>Подключить real backend и авторизацию</strong>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Демо интерфейса</p>
+            <h1>Кабинет владельца бизнеса</h1>
+          </div>
+          <div class="header-actions">
+            <a class="button button--ghost" href="index.html">На лендинг</a>
+            <a class="button button--primary" href="review-demo.html">Открыть review flow</a>
+          </div>
+        </header>
+
+        <section class="dashboard-grid">
+          <article class="stat-panel card-soft">
+            <span>Переходы по ссылкам</span>
+            <strong>2 418</strong>
+            <small>+14% к прошлой неделе</small>
+          </article>
+          <article class="stat-panel card-soft">
+            <span>Оценки оставлены</span>
+            <strong>1 602</strong>
+            <small>66.2% conversion</small>
+          </article>
+          <article class="stat-panel card-soft">
+            <span>Позитивные ветки</span>
+            <strong>1 117</strong>
+            <small>отправлены на площадки</small>
+          </article>
+          <article class="stat-panel card-soft stat-panel--alert">
+            <span>Негатив требует внимания</span>
+            <strong>27</strong>
+            <small>новых за 24 часа</small>
+          </article>
+        </section>
+
+        <section class="panel-grid">
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Конструктор страниц</p>
+                <h2>Активные review-страницы</h2>
+              </div>
+              <button class="button button--secondary">Создать новую</button>
+            </div>
+
+            <div class="table-like">
+              <div class="table-like__row table-like__row--head">
+                <span>Название</span>
+                <span>Локации</span>
+                <span>Порог позитива</span>
+                <span>Переходы</span>
+              </div>
+              <div class="table-like__row">
+                <span>Основная страница сети</span>
+                <span>12 филиалов</span>
+                <span>4★ и выше</span>
+                <span>1 128</span>
+              </div>
+              <div class="table-like__row">
+                <span>Автосервис Premium</span>
+                <span>3 филиала</span>
+                <span>5★</span>
+                <span>642</span>
+              </div>
+              <div class="table-like__row">
+                <span>Салон красоты City</span>
+                <span>1 филиал</span>
+                <span>4★ и выше</span>
+                <span>279</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Последние отзывы</p>
+                <h2>Мониторинг площадок</h2>
+              </div>
+              <span class="badge badge--success">3 новых</span>
+            </div>
+
+            <div class="review-list">
+              <article class="review-item">
+                <div>
+                  <strong>Яндекс Карты · 5★</strong>
+                  <p>Спасибо мастеру, быстро нашли проблему и всё объяснили.</p>
+                </div>
+                <div class="review-item__actions">
+                  <button class="button button--secondary button--small">Написать ответ</button>
+                </div>
+              </article>
+              <article class="review-item review-item--attention">
+                <div>
+                  <strong>2GIS · 2★</strong>
+                  <p>Долго ждал приём, не предупредили о задержке.</p>
+                </div>
+                <div class="review-item__actions">
+                  <button class="button button--secondary button--small">Сгенерировать ответ</button>
+                </div>
+              </article>
+              <article class="review-item">
+                <div>
+                  <strong>Google · 4★</strong>
+                  <p>Хороший сервис, но парковку было сложно найти.</p>
+                </div>
+                <div class="review-item__actions">
+                  <button class="button button--secondary button--small">Написать ответ</button>
+                </div>
+              </article>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel-grid panel-grid--secondary">
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Воронка</p>
+                <h2>Что происходит после сканирования QR</h2>
+              </div>
+            </div>
+
+            <div class="funnel-list">
+              <div><span>Сканировали QR / открыли ссылку</span><strong>2 418</strong></div>
+              <div><span>Поставили звезды</span><strong>1 602</strong></div>
+              <div><span>Перешли на внешнюю площадку</span><strong>1 117</strong></div>
+              <div><span>Оставили негативный фидбек</span><strong>94</strong></div>
+            </div>
+          </article>
+
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Roadmap</p>
+                <h2>Что подключаем следующим</h2>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li>Auth и роли пользователей</li>
+              <li>CRUD для страниц, локаций и площадок</li>
+              <li>События аналитики и хранение в PostgreSQL</li>
+              <li>Telegram-уведомления о негативе</li>
+              <li>Импорт отзывов и AI-черновики ответов</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
