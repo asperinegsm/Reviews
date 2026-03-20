@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewFlow CIS — Компании и адреса</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar card-soft">
+        <a class="brand brand--sidebar" href="index.html">
+          <span class="brand__mark">RF</span>
+          <span>ReviewFlow CIS</span>
+        </a>
+
+        <div class="workspace-switcher card-soft">
+          <span class="muted">Рабочее пространство</span>
+          <strong>Asperine Group</strong>
+          <small>3 компании · 14 адресов</small>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-link" href="dashboard.html">Dashboard</a>
+          <a class="sidebar-link sidebar-link--active" href="companies.html">Компании и адреса</a>
+          <a class="sidebar-link" href="#">Review Pages</a>
+          <a class="sidebar-link" href="#">Reviews</a>
+          <a class="sidebar-link" href="#">Requests</a>
+          <a class="sidebar-link" href="#">Widgets</a>
+          <a class="sidebar-link" href="#">AI Replies</a>
+          <a class="sidebar-link" href="#">Settings</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p class="muted">Аккаунт</p>
+          <strong>Gomel Med Group</strong>
+          <small>owner@reviewflow.app</small>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Компании и адреса</p>
+            <h1>Гибкая структура для multi-company клиентов</h1>
+            <p class="muted">
+              Здесь клиент управляет несколькими компаниями, их филиалами, review pages и
+              площадками в одном кабинете.
+            </p>
+          </div>
+          <div class="header-actions">
+            <button class="button button--secondary">Добавить адрес</button>
+            <button class="button button--primary">Добавить компанию</button>
+          </div>
+        </header>
+
+        <section class="section-tabs">
+          <button class="section-tabs__item section-tabs__item--active">Все компании</button>
+          <button class="section-tabs__item">Медицина</button>
+          <button class="section-tabs__item">Автосервисы</button>
+          <button class="section-tabs__item">Салоны</button>
+        </section>
+
+        <section class="company-layout">
+          <article class="panel card-soft company-list-panel">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Компании</p>
+                <h2>Структура аккаунта</h2>
+              </div>
+            </div>
+
+            <div class="company-list">
+              <button class="company-card company-card--active" type="button">
+                <div>
+                  <strong>Nova Clinic</strong>
+                  <p>Медицина · 6 адресов</p>
+                </div>
+                <div class="inline-stats">
+                  <span>4.9</span>
+                  <small>248 отзывов</small>
+                </div>
+              </button>
+
+              <button class="company-card" type="button">
+                <div>
+                  <strong>AutoCare Group</strong>
+                  <p>Автосервис · 4 адреса</p>
+                </div>
+                <div class="inline-stats">
+                  <span>4.7</span>
+                  <small>176 отзывов</small>
+                </div>
+              </button>
+
+              <button class="company-card" type="button">
+                <div>
+                  <strong>Beauty City</strong>
+                  <p>Салоны красоты · 4 адреса</p>
+                </div>
+                <div class="inline-stats">
+                  <span>4.8</span>
+                  <small>93 отзыва</small>
+                </div>
+              </button>
+            </div>
+          </article>
+
+          <article class="panel card-soft company-detail-panel">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Выбрана компания</p>
+                <h2>Nova Clinic</h2>
+              </div>
+              <div class="header-actions">
+                <button class="button button--ghost button--small">Настроить площадки</button>
+                <button class="button button--secondary button--small">Создать review page</button>
+              </div>
+            </div>
+
+            <div class="company-meta-bar">
+              <div class="company-meta-item">
+                <span>Ниша</span>
+                <strong>Медицина</strong>
+              </div>
+              <div class="company-meta-item">
+                <span>Адресов</span>
+                <strong>6</strong>
+              </div>
+              <div class="company-meta-item">
+                <span>Активных страниц</span>
+                <strong>3</strong>
+              </div>
+              <div class="company-meta-item">
+                <span>Telegram</span>
+                <strong>Подключён</strong>
+              </div>
+            </div>
+
+            <div class="location-grid">
+              <article class="location-card">
+                <div class="location-card__top">
+                  <div>
+                    <strong>Алматы · Абая 21</strong>
+                    <p>Главная клиника · 24/7</p>
+                  </div>
+                  <span class="status-badge status-badge--success">Активно</span>
+                </div>
+                <div class="location-card__meta">
+                  <span>Google · Яндекс · 2GIS</span>
+                  <span>4.9 ★</span>
+                </div>
+                <div class="location-card__actions">
+                  <button class="button button--secondary button--small">Review pages</button>
+                  <button class="button button--ghost button--small">Отзывы</button>
+                </div>
+              </article>
+
+              <article class="location-card">
+                <div class="location-card__top">
+                  <div>
+                    <strong>Астана · Туран 14</strong>
+                    <p>Филиал №2 · взрослое отделение</p>
+                  </div>
+                  <span class="status-badge status-badge--warning">Требует настройки</span>
+                </div>
+                <div class="location-card__meta">
+                  <span>Google · Яндекс</span>
+                  <span>4.7 ★</span>
+                </div>
+                <div class="location-card__actions">
+                  <button class="button button--secondary button--small">Настроить</button>
+                  <button class="button button--ghost button--small">Открыть</button>
+                </div>
+              </article>
+
+              <article class="location-card">
+                <div class="location-card__top">
+                  <div>
+                    <strong>Шымкент · Tauke Khan 98</strong>
+                    <p>Стоматология · новый филиал</p>
+                  </div>
+                  <span class="status-badge status-badge--success">Активно</span>
+                </div>
+                <div class="location-card__meta">
+                  <span>Google · 2GIS</span>
+                  <span>5.0 ★</span>
+                </div>
+                <div class="location-card__actions">
+                  <button class="button button--secondary button--small">Review pages</button>
+                  <button class="button button--ghost button--small">Отзывы</button>
+                </div>
+              </article>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

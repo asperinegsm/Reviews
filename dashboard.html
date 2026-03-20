@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewFlow CIS — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar card-soft">
+        <a class="brand brand--sidebar" href="index.html">
+          <span class="brand__mark">RF</span>
+          <span>ReviewFlow CIS</span>
+        </a>
+
+        <div class="workspace-switcher card-soft">
+          <span class="muted">Рабочее пространство</span>
+          <strong>Asperine Group</strong>
+          <small>3 компании · 14 адресов</small>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-link sidebar-link--active" href="dashboard.html">Dashboard</a>
+          <a class="sidebar-link" href="companies.html">Компании и адреса</a>
+          <a class="sidebar-link" href="#">Review Pages</a>
+          <a class="sidebar-link" href="#">Reviews</a>
+          <a class="sidebar-link" href="#">Requests</a>
+          <a class="sidebar-link" href="#">Widgets</a>
+          <a class="sidebar-link" href="#">AI Replies</a>
+          <a class="sidebar-link" href="#">Settings</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p class="muted">Аккаунт</p>
+          <strong>Gomel Med Group</strong>
+          <small>owner@reviewflow.app</small>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h1>Общий обзор по всем компаниям</h1>
+            <p class="muted">
+              Смотрите ключевые цифры по сети целиком или быстро переключайтесь на конкретную
+              компанию и адрес.
+            </p>
+          </div>
+          <div class="header-actions">
+            <button class="button button--ghost">Все компании</button>
+            <a class="button button--secondary" href="companies.html">Открыть адреса</a>
+            <a class="button button--primary" href="review-demo.html">Review flow</a>
+          </div>
+        </header>
+
+        <section class="section-tabs">
+          <button class="section-tabs__item section-tabs__item--active">Все компании</button>
+          <button class="section-tabs__item">Nova Clinic</button>
+          <button class="section-tabs__item">AutoCare Group</button>
+          <button class="section-tabs__item">Beauty City</button>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="stat-panel card-soft">
+            <span>Переходы по ссылкам</span>
+            <strong>2 418</strong>
+            <small>по 3 компаниям</small>
+          </article>
+          <article class="stat-panel card-soft">
+            <span>Оценки оставлены</span>
+            <strong>1 602</strong>
+            <small>66.2% conversion</small>
+          </article>
+          <article class="stat-panel card-soft">
+            <span>Позитивные ветки</span>
+            <strong>1 117</strong>
+            <small>отправлены на площадки</small>
+          </article>
+          <article class="stat-panel card-soft stat-panel--alert">
+            <span>Негатив требует внимания</span>
+            <strong>27</strong>
+            <small>новых за 24 часа</small>
+          </article>
+        </section>
+
+        <section class="panel-grid">
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Структура аккаунта</p>
+                <h2>Компании и адреса под контролем</h2>
+              </div>
+              <a class="button button--secondary button--small" href="companies.html">
+                Управлять структурой
+              </a>
+            </div>
+
+            <div class="company-overview-grid">
+              <article class="company-mini-card">
+                <strong>3</strong>
+                <span>Компании в аккаунте</span>
+              </article>
+              <article class="company-mini-card">
+                <strong>14</strong>
+                <span>Активных адресов</span>
+              </article>
+              <article class="company-mini-card">
+                <strong>9</strong>
+                <span>Review Pages</span>
+              </article>
+              <article class="company-mini-card">
+                <strong>4</strong>
+                <span>Ожидают настройки</span>
+              </article>
+            </div>
+          </article>
+
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Последние отзывы</p>
+                <h2>Мониторинг площадок</h2>
+              </div>
+              <span class="badge badge--success">3 новых</span>
+            </div>
+
+            <div class="review-list">
+              <article class="review-item">
+                <div>
+                  <strong>Nova Clinic · Яндекс · 5★</strong>
+                  <p>Спасибо врачу и администратору, всё было спокойно и быстро.</p>
+                </div>
+                <div class="review-item__actions">
+                  <button class="button button--secondary button--small">Ответить</button>
+                </div>
+              </article>
+              <article class="review-item review-item--attention">
+                <div>
+                  <strong>AutoCare Group · 2GIS · 2★</strong>
+                  <p>Мастер не предупредил о задержке, клиент ждёт обратную связь.</p>
+                </div>
+                <div class="review-item__actions">
+                  <button class="button button--secondary button--small">Сгенерировать</button>
+                </div>
+              </article>
+              <article class="review-item">
+                <div>
+                  <strong>Beauty City · Google · 4★</strong>
+                  <p>Хороший сервис, но хотелось бы больше напоминаний о визите.</p>
+                </div>
+                <div class="review-item__actions">
+                  <button class="button button--secondary button--small">Открыть</button>
+                </div>
+              </article>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel-grid panel-grid--secondary">
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Воронка</p>
+                <h2>Что происходит после сканирования QR</h2>
+              </div>
+            </div>
+
+            <div class="funnel-list">
+              <div><span>Сканировали QR / открыли ссылку</span><strong>2 418</strong></div>
+              <div><span>Поставили звезды</span><strong>1 602</strong></div>
+              <div><span>Перешли на внешнюю площадку</span><strong>1 117</strong></div>
+              <div><span>Оставили негативный фидбек</span><strong>94</strong></div>
+            </div>
+          </article>
+
+          <article class="panel card-soft">
+            <div class="panel__header">
+              <div>
+                <p class="muted">Следующий шаг</p>
+                <h2>Что проектируем после dashboard</h2>
+              </div>
+            </div>
+
+            <ul class="roadmap-list">
+              <li>Страница “Компании и адреса” с быстрым управлением</li>
+              <li>Конструктор Review Page с шаблонами по нишам</li>
+              <li>Лента отзывов и статусы ответа</li>
+              <li>Настройки площадок и Telegram</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
